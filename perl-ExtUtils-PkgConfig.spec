@@ -1,7 +1,7 @@
 %define module ExtUtils-PkgConfig
 %define name perl-%module
 %define version 1.07
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Perl module for further extending extensions
 Name:    %{name}
@@ -29,7 +29,9 @@ find -type d -name CVS | rm -fr
 
 %build
 make
-%make test || :
+
+%check
+%make test
 
 %install
 rm -rf $RPM_BUILD_ROOT
