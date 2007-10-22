@@ -1,7 +1,7 @@
 %define module ExtUtils-PkgConfig
 %define name perl-%module
-%define version 1.07
-%define release %mkrel 4
+%define version 1.08
+%define release %mkrel 1
 
 Summary: Perl module for further extending extensions
 Name:    %{name}
