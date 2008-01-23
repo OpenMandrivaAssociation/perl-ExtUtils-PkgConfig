@@ -9,7 +9,7 @@ Version: %{version}
 Release: %{release}
 License: GPL or Artistic
 Group:   Development/Perl
-Source:  http://prdownloads.sourceforge.net/gtk2-perl/%module-%version.tar.bz2
+Source:  http://search.cpan.org/CPAN/authors/id/T/TS/TSCH/%module-%version.tar.bz2
 URL: http://gtk2-perl.sf.net/
 BuildRequires: perl-devel
 BuildRequires: pkgconfig
