@@ -1,6 +1,6 @@
 %define module ExtUtils-PkgConfig
 %define name perl-%module
-%define version 1.08
+%define version 1.09
 %define release %mkrel 1
 
 Summary: Perl module for further extending extensions
@@ -9,7 +9,7 @@ Version: %{version}
 Release: %{release}
 License: GPL or Artistic
 Group:   Development/Perl
-Source:  http://search.cpan.org/CPAN/authors/id/T/TS/TSCH/%module-%version.tar.bz2
+Source:  http://search.cpan.org/CPAN/authors/id/T/TS/TSCH/%module-%version.tar.gz
 URL: http://gtk2-perl.sf.net/
 BuildRequires: perl-devel
 BuildRequires: pkgconfig
