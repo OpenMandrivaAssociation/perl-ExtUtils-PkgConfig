@@ -1,7 +1,7 @@
 %define module ExtUtils-PkgConfig
 %define name perl-%module
-%define version 1.11
-%define release %mkrel 2
+%define version 1.12
+%define release %mkrel 1
 
 Summary: Perl module for further extending extensions
 Name:    %{name}
@@ -9,12 +9,11 @@ Version: %{version}
 Release: %{release}
 License: GPL or Artistic
 Group:   Development/Perl
-Source:  http://search.cpan.org/CPAN/authors/id/T/TS/TSCH/%module-%version.tar.gz
-URL: http://gtk2-perl.sf.net/
-BuildRequires: perl-devel
+Url:        http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/ExtUtils/%{module}-%{version}.tar.gz
 BuildRequires: pkgconfig
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 This module tries to make it easy to build Perl extensions that use
@@ -24,7 +23,7 @@ also a C and an XS interface besides the perl one.
 
 %prep
 %setup -q -n %module-%version
-find -type d -name CVS | rm -fr
+#find -type d -name CVS | rm -fr
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 
 %build
@@ -34,11 +33,11 @@ make
 %make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 
 %files
