@@ -1,20 +1,19 @@
 %define upstream_name    ExtUtils-PkgConfig
 %define upstream_version 1.13
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    1
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	2
 
-Summary:    Perl module for further extending extensions
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/ExtUtils/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Perl module for further extending extensions
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/ExtUtils/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: pkgconfig
+BuildRequires:	pkgconfig
 BuildRequires:	perl-devel
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildArch:	noarch
 
 %description
 This module tries to make it easy to build Perl extensions that use
@@ -31,18 +30,12 @@ also a C and an XS interface besides the perl one.
 make
 
 %check
-%make test
+make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
-
 %files
-%defattr(-, root, root)
 %doc Changes
 %{_mandir}/*/*
 %{perl_vendorlib}/ExtUtils/*.pm
@@ -61,7 +54,7 @@ rm -rf %{buildroot}
 + Revision: 667134
 - mass rebuild
 
-* Tue Aug 04 2009 Jérôme Quelin <jquelin@mandriva.org> 1.120.0-2mdv2010.1
+* Tue Aug 04 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.120.0-2mdv2010.1
 + Revision: 408702
 - force rebuild
 - rebuild using %%perl_convert_version
@@ -104,7 +97,7 @@ rm -rf %{buildroot}
 - enable test
 
 
-* Mon Oct 03 2005 Nicolas L�cureuil <neoclust@mandriva.org> 1.07-2mdk
+* Mon Oct 03 2005 Nicolas Lécureuil <neoclust@mandriva.org> 1.07-2mdk
 - Fix BuildRequires
 
 * Mon Jan 24 2005 Thierry Vignaud <tvignaud@mandrakesoft.com> 1.07-1mdk
