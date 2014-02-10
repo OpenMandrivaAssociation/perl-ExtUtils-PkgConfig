@@ -1,14 +1,14 @@
 %define modname	ExtUtils-PkgConfig
-%define modver	1.13
+%define modver 1.15
 
 Summary:	Perl module for further extending extensions
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	7
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/ExtUtils/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-PkgConfig-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -36,4 +36,5 @@ make test
 %doc Changes
 %{perl_vendorlib}/ExtUtils/*.pm
 %{_mandir}/man3/*
+
 
