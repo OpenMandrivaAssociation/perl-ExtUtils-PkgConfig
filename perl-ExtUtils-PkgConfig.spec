@@ -1,14 +1,14 @@
 %define modname	ExtUtils-PkgConfig
-%define modver 1.16
+#define modver 1.16
 
 Summary:	Perl module for further extending extensions
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	3
+Version:	1.16
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-PkgConfig-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-PkgConfig-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +21,7 @@ that a perl extension is treated like a shared library that provides
 also a C and an XS interface besides the perl one.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 #find -type d -name CVS | rm -fr
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 
@@ -32,7 +32,7 @@ make
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes
