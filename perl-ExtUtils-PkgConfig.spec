@@ -1,9 +1,9 @@
 %define modname	ExtUtils-PkgConfig
-%define modver 1.16
+#define modver 1.16
 
 Summary:	Perl module for further extending extensions
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	1.16
 Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
@@ -21,7 +21,7 @@ that a perl extension is treated like a shared library that provides
 also a C and an XS interface besides the perl one.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 #find -type d -name CVS | rm -fr
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 
@@ -32,7 +32,7 @@ make
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes
