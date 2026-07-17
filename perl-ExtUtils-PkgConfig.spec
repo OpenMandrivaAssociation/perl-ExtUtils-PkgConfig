@@ -4,7 +4,7 @@
 Summary:	Perl module for further extending extensions
 Name:		perl-%{modname}
 Version:	1.16
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
