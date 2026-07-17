@@ -8,7 +8,7 @@ Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-PkgConfig-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-PkgConfig-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
